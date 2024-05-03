@@ -1,4 +1,4 @@
-package com.blackstreet.mobile.modules.home
+package com.blackstreet.mobile.modules.invest.viewmodels
 
 import androidx.lifecycle.ViewModel
 

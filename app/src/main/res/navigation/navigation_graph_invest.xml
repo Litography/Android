@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph_invest"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.blackstreet.mobile.modules.invest.fragments.HomeFragment"
+        android:label="investHomeFragment"
+        tools:layout="@layout/fragment_home_invest" />
+
+    <fragment
+        android:id="@+id/applicationFragment"
+        android:name="com.blackstreet.mobile.modules.invest.fragments.ApplicationFragment"
+        android:label="investApplicationFragment"
+        tools:layout="@layout/fragment_application" />
+
+</navigation>
