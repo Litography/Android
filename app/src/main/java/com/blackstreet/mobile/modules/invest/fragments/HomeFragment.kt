@@ -1,14 +1,13 @@
 package com.blackstreet.mobile.modules.invest.fragments
 
-import androidx.fragment.app.viewModels
 import android.os.Bundle
 import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.blackstreet.mobile.R
 import com.blackstreet.mobile.core.BaseFragment
 import com.blackstreet.mobile.databinding.FragmentHomeInvestBinding
@@ -17,7 +16,6 @@ import com.blackstreet.mobile.modules.invest.viewmodels.HomeViewModel
 class HomeFragment : BaseFragment() {
 
     private lateinit var binding: FragmentHomeInvestBinding
-    private lateinit var controller: NavController
 
     private val viewModel: HomeViewModel by viewModels()
 
@@ -29,13 +27,11 @@ class HomeFragment : BaseFragment() {
         return binding.root
     }
 
-    override fun setupView() {
-        controller = Navigation.findNavController(requireActivity(), R.id.navGraphInvest)
-    }
+    override fun setupView() {}
 
     override fun setupListeners() {
         binding.buttonRedirect.setOnClickListener {
-            controller.navigate(R.id.applicationFragment)
+            findNavController().navigate(R.id.applicationFragment)
         }
     }
 

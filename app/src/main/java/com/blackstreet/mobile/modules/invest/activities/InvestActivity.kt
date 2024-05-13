@@ -9,8 +9,10 @@ class InvestActivity : BaseActivity() {
     private lateinit var binding: ActivityInvestBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+//        (applicationContext as AppApplication).appComponent.inject(this)
         super.onCreate(savedInstanceState)
         binding = ActivityInvestBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        println(walker)
     }
 }

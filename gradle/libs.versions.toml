@@ -1,6 +1,8 @@
 [versions]
 agp = "8.3.2"
 constraintlayout = "2.2.0-alpha13"
+#dagger = "2.28.3"
+dagger = "2.15"
 navVersion = "2.7.7"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
@@ -15,7 +17,7 @@ lifecycleLivedataKtx = "2.7.0"
 lifecycleViewmodelKtx = "2.7.0"
 fragmentKtx = "1.7.0"
 appcompat = "1.6.1"
-material = "1.4.0"
+material = "1.12.0"
 
 [libraries]
 androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
@@ -23,6 +25,8 @@ androidx-navFragment = { module = "androidx.navigation:navigation-fragment-ktx",
 androidx-navUI = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navVersion" }
 androidx-navTest = { module = "androidx.navigation:navigation-testing", version.ref = "navVersion" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
+dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }

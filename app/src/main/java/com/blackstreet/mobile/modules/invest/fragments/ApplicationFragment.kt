@@ -1,12 +1,13 @@
 package com.blackstreet.mobile.modules.invest.fragments
 
-import androidx.fragment.app.viewModels
+import android.content.Context
 import android.os.Bundle
 import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
+import androidx.fragment.app.viewModels
 import com.blackstreet.mobile.core.BaseFragment
 import com.blackstreet.mobile.databinding.FragmentApplicationBinding
 import com.blackstreet.mobile.modules.invest.viewmodels.ApplicationViewModel
@@ -23,6 +24,11 @@ class ApplicationFragment : BaseFragment() {
     ): View {
         binding = FragmentApplicationBinding.inflate(layoutInflater, container, false)
         return binding.root
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+//        (requireActivity().applicationContext as AppApplication).appComponent.inject(this)
     }
 
     override fun setupView() {}
